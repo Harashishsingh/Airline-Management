@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'ticket.css' %}">
+    <link rel="icon" href="{% static 'img/aerolink.png' %}" type="image/png">
+</head>
+<body class="bg-light">
+
+    <div class="container my-5">
+        <h1 class="mb-4">My Reservation</h1>
+        <div class="row">
+            {% for i in data %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ i.Passenger_name }}</h5>
+                        <p class="card-text">Email: {{ i.Email }}</p>
+                        <p class="card-text">Number of Seats: {{ i.Number_pass }}</p>
+                        <p class="card-text">Flight: {{ i.flight_id.Flight_name }}</p>
+                        <p class="card-text">Seats: {{ i.Seat }}</p>
+                        
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

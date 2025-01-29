@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color: #d1af77 !important;
+    font-family: Georgia, serif;
+    font-weight: 500;
+}
+.nav-link{
+    color: beige;
+}
